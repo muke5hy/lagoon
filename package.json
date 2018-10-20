@@ -1,8 +1,8 @@
 {
-  "name": "simpleats-frontend",
+  "name": "lagoon-frontend",
   "version": "0.0.1",
   "private": true,
-  "description": "simpleats frontend assets.",
+  "description": "lagoon frontend assets.",
   "main": "index.js",
   "scripts": {
     "test": "jest",

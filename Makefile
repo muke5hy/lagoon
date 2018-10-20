@@ -13,6 +13,8 @@ bootstrap:
 venv:
 	virtualenv .venv -p python3
 
+npm: 
+	npm install
 tests:
 	export APP_SETTINGS=config.TestingConfig
 	nosetests -v tests
@@ -22,12 +24,16 @@ install:
 	.venv/bin/pip install -r requirements.txt
 
 run:
-	echo "Do export APP_SETTINGS=config.DevelopmentConfig"
-	.venv/bin/python run.py runserver
+	.venv/bin/python manage.py runserver
 
 clean:
 	rm *.pyc
 
 requirements:
-	echo "Updating requirements.txt"
 	pip freeze > requirements.txt
+
+manage:
+	.venv/bin/python manage.py $(ARG)
+
+shell:
+	.venv/bin/python

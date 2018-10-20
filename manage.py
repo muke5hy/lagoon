@@ -12,8 +12,8 @@ if __name__ == "__main__":
     if sys.argv[1] == 'test':
         if settings_module:
             print("Ignoring config('DJANGO_SETTINGS_MODULE') because it's test. "
-                  "Using 'simpleats.settings.test'")
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "simpleats.settings.test")
+                  "Using 'lagoon.settings.test'")
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lagoon.settings.test")
     else:
         if settings_module is None:
             print("Error: no DJANGO_SETTINGS_MODULE found. Will NOT start devserver. "

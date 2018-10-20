@@ -24,6 +24,7 @@ npm-debug.log
 #Folders
 .DS_Store
 .venv
+.vscode
 
 # Webpack
 /assets/bundles/*

@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/github/license/vintasoftware/django-react-boilerplate.svg)](LICENSE.txt)
+[![License: MIT](https://img.shields.io/github/license/muke5hy/django-react-boilerplate.svg)](LICENSE.txt)
 
 # Django React Boilerplate
 
@@ -22,55 +22,55 @@ Also, includes a Heroku `app.json` and a working Django `production.py` settings
 
 This is a good starting point for modern Python/JavaScript web projects.
 
-## Project bootstrap [![CircleCI](https://circleci.com/gh/vintasoftware/django-react-boilerplate.svg?style=svg)](https://circleci.com/gh/vintasoftware/django-react-boilerplate) [![Greenkeeper badge](https://badges.greenkeeper.io/vintasoftware/django-react-boilerplate.svg)](https://greenkeeper.io/)
+## Project bootstrap [![CircleCI](https://circleci.com/gh/muke5hy/django-react-boilerplate.svg?style=svg)](https://circleci.com/gh/muke5hy/django-react-boilerplate) [![Greenkeeper badge](https://badges.greenkeeper.io/muke5hy/django-react-boilerplate.svg)](https://greenkeeper.io/)
 - [ ] Open the command line and go to the directory you want to start your project in.
 - [ ] Start your project using:
 ```
-django-admin startproject theprojectname --extension py,yml,json --name Procfile,README.md,.env.example --template=https://github.com/vintasoftware/django-react-boilerplate/archive/boilerplate-release.zip
+django-admin startproject theprojectname --extension py,yml,json --name Procfile,README.md,.env.example --template=https://github.com/muke5hy/django-react-boilerplate/archive/boilerplate-release.zip
 ```
 - [ ] Above: don't forget the `--extension` and `--name` params! (also don't forget to change `theprojectname` to your project's name).
 - [ ] Navigate to the project's directory through your command line.
 - [ ] Install pipenv if not installed yet: `pip install pipenv` (maybe you'll have to run this command as an OS superuser).
 - [ ] Make sure you have Python 3.6 installed.
-- [ ] `pipenv install --dev`
+- [ ] `make install `
 - [ ] Activate the newly created virtualenv with `pipenv shell`
 - [ ] `npm update --save`
 - [ ] `npm update --save-dev`
 - [ ] Check for outdated npm dependencies with `npm outdated` and update them.
 - [ ] Change the first line of README to the name of the project.
-- [ ] Add an email address to the `ADMINS` settings variable in `simpleats/simpleats/settings/base.py`
-- [ ] Change the `SERVER_EMAIL` to the email address used to send e-mails in `simpleats/simpleats/settings/production.py`
+- [ ] Add an email address to the `ADMINS` settings variable in `lagoon/lagoon/settings/base.py`
+- [ ] Change the `SERVER_EMAIL` to the email address used to send e-mails in `lagoon/lagoon/settings/production.py`
 
 After completing ALL of the above, remove this `Project bootstrap` section from the project README. Then follow `Running` below.
 
 ## Running
 ### Setup
 - On project root, do the following:
-- Create a copy of ``simpleats/settings/local.py.example``:  
-  `cp simpleats/settings/local.py.example simpleats/settings/local.py` (remembering you should replace `simpleats` with your project's name!).
+- Create a copy of ``lagoon/settings/local.py.example``:  
+  `cp lagoon/settings/local.py.example lagoon/settings/local.py` (remembering you should replace `lagoon` with your project's name!).
 - Create a copy of ``.env.example``:  
   `cp .env.example .env`
 - Create the migrations for `users` app (do this, then remove this line from the README):  
-  `python manage.py makemigrations`
+  `make manage makemigrations`
 - Run the migrations:  
-  `python manage.py migrate`
+  `make manage migrate`
 
 ### Tools
 - Setup [editorconfig](http://editorconfig.org/), [prospector](https://prospector.landscape.io/en/master/) and [ESLint](http://eslint.org/) in the text editor you will use to develop.
 
 ### Running the project
 - Open a command line window and go to the project's directory.
-- `pipenv install --dev`
+- `make all`
 - `npm install`
 - `npm run start`
 - Open another command line window and go to the project's directory.
-- `pipenv shell`
-- `python manage.py runserver`
+- `make shell`
+- `make manage runserver`
 
 #### Celery
 - Open a command line window and go to the project's directory
-- `pipenv shell`
-- `python manage.py celery`
+- `make shell`
+- `make manage celery`
 
 ### Testing
 `make test`
@@ -78,9 +78,6 @@ After completing ALL of the above, remove this `Project bootstrap` section from 
 Will run django tests using `--keepdb` and `--parallel`. You may pass a path to the desired test module in the make command. E.g.:
 
 `make test someapp.tests.test_views`
-
-### Adding new pypi libs
-Just run `pipenv install LIB_NAME_ON_PYPI` and then `pipenv lock` to lock the version in Pipfile.lock file
 
 ## Linting
 - Manually with `prospector` and `npm run lint` on project root.

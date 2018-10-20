@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'simpleats.urls'
+ROOT_URLCONF = 'lagoon.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'simpleats.wsgi.application'
+WSGI_APPLICATION = 'lagoon.wsgi.application'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
