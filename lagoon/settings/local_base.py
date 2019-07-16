@@ -39,7 +39,7 @@ MIDDLEWARE += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
 INTERNAL_IPS = ['127.0.0.1', '::1']
 
 DEBUG_TOOLBAR_PANELS = [
-    'ddt_request_history.panels.request_history.RequestHistoryPanel',
+    # 'ddt_request_history.panels.request_history.RequestHistoryPanel',
     'debug_toolbar.panels.versions.VersionsPanel',
     'debug_toolbar.panels.timer.TimerPanel',
     'debug_toolbar.panels.settings.SettingsPanel',
