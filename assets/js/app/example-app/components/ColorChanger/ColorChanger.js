@@ -30,7 +30,7 @@ class ColorChanger extends React.Component {
     return (
       <div className="main-container">
         <h2>{title}</h2>
-        <h3 className="app-name">Color Changer App</h3>
+        <h3 className="app-name">Ok Ok </h3>
         <p>
           Check this example app: change the color to see it reflected in the text next to it.
         </p>
@@ -42,6 +42,7 @@ class ColorChanger extends React.Component {
             <option value="red">Red</option>
             <option value="blue">Blue</option>
             <option value="purple">Purple</option>
+            <option value="black">Some color</option>
           </select>
 
           <ColorDisplay color={color} />
