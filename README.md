@@ -5,8 +5,8 @@
 ### Running the project
 - Open a command line window and go to the project's directory.
 - `pipenv install --dev`
-- `npm install`
-- `npm run start`
+- `yarn install`
+- `yarn run start`
 - Open another command line window and go to the project's directory.
 - `pipenv shell`
 - `python manage.py runserver`
@@ -27,7 +27,7 @@ Will run django tests using `--keepdb` and `--parallel`. You may pass a path to 
 Just run `pipenv install LIB_NAME_ON_PYPI` and then `pipenv lock` to lock the version in Pipfile.lock file
 
 ## Linting
-- Manually with `prospector` and `npm run lint` on project root.
+- Manually with `prospector` and `yarn run lint` on project root.
 - During development with an editor compatible with prospector and ESLint.
 
 ## Pre-commit hooks
